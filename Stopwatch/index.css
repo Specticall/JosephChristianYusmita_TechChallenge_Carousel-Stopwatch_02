@@ -1,0 +1,94 @@
+:root {
+  --animation-primary: 0.4s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-fast: 0.2s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-smooth: 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-navigation: 1.2s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  background-color: rgb(13, 13, 14);
+}
+
+.timer span {
+  font-size: 5rem;
+  color: rgb(225, 225, 225);
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1.5rem; */
+  margin-top: 1rem;
+  height: 3rem;
+  transition: 200ms;
+}
+
+.cta {
+  margin-inline: 0.75rem;
+}
+
+.cta.inactive {
+  width: 0;
+  scale: 100% 100%;
+  font-size: 0;
+  visibility: hidden;
+  margin: 0;
+}
+
+.cta {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  border-radius: 100%;
+  width: 3rem;
+  aspect-ratio: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.cta:hover {
+  opacity: 0.65;
+}
+
+.cta.start {
+  background-color: rgb(255, 215, 14);
+  color: black;
+}
+.cta.pause {
+  background-color: none;
+  border: 1px solid rgb(189, 187, 187);
+}
+.cta.stop {
+  background-color: rgb(247, 247, 247);
+  color: black;
+}
+
+.badge {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10rem;
+  padding: 0.25rem 1rem;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
